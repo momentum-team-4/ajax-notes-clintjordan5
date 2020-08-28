@@ -1,0 +1,19 @@
+.meals{
+    height: fit-content;
+    width: fit-content;
+    background-image: url(https://wallpapercave.com/wp/wp4034733.jpg);
+    padding: 5rem;
+}
+/* using color codes to check that tags are correct*/
+
+textarea{
+font-size: 20px;
+font-family: Arial, Helvetica, sans-serif;
+height:150px;
+width:150px;
+background-color:#f5c842;
+}
+
+button{
+background-color: tomato;
+}
