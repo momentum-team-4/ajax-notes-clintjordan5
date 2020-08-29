@@ -5,7 +5,17 @@ window.addEventListener('load', function(){
     .then(response => response.json())
     .then(data => {console.log(data)})
 })
-// worked on this line of code with group, 
+// worked on this line of code with group as starting point
+
+let foodLog = document.querySelector("#meals")
+let save = document.querySelector("#save-log")
+
+save.addEventListener ("click", function () {
+    event.preventDefault()
+    let listNotes = document.querySelector("#text").text
+    listNotes.textContent= "Daily Nutrition" + listNotes ; 
+})
+// trying to make save log button display text of "Daily Nutrition" + list of the notes added 
 
 const saveLog = document.querySelector('save-log')
 // making a constant for each ID 

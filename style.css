@@ -1,3 +1,7 @@
+*{
+    background-color: turquoise;
+}
+
 .meals{
     height: fit-content;
     width: fit-content;
