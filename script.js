@@ -1,29 +1,21 @@
-window.addEventListener('load', function(){
-    fetch('http://localhost:3000/notes/')
-    // seeing in node that my "home" is http://localhost:3000, 
-    // but the project readme says it should be "....3000/notes"
-    .then(response => response.json())
-    .then(data => {console.log(data)})
-})
-// worked on this line of code with group as starting point
+const foodLog = document.querySelector("#meals")
+const saveLog = document.querySelector("#save-log")
+const deleteLog = document.querySelector("#delete-log")
+const notesOutput = document.querySelector ("#output")
 
-let foodLog = document.querySelector("#meals")
-let save = document.querySelector("#save-log")
 
-save.addEventListener ("click", function () {
+saveLog.addEventListener ("click", function () {
     event.preventDefault()
-    let listNotes = document.querySelector("#text").text
-    listNotes.textContent= "Daily Nutrition" + listNotes ; 
+    let logText = document.querySelector(".meals").value
+    output.textContent= logText + " Meals Logged " ; 
 })
-// trying to make save log button display text of "Daily Nutrition" + list of the notes added 
 
-const saveLog = document.querySelector('save-log')
-// making a constant for each ID 
+window.addEventListener('load', function(){
+  fetch('http://localhost:3000/notes/')
+  .then(response => response.json())
+  .then(data => {console.log(data)})
+})
 
-let saveLog = document.querySelector('save-log')
-// same as line 9 but "let" rather than "const"
-
-// console error is that saveLog is already declared so need to see which one works
 
 fetch('http://localhost:3000/notes/', {
   method: 'POST', 
@@ -33,5 +25,3 @@ fetch('http://localhost:3000/notes/', {
 .then(r => r.json())
 .then(
 )
-
-// from readme.md

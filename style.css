@@ -1,5 +1,6 @@
 *{
     background-color: turquoise;
+    box-sizing: border-box;
 }
 
 .meals{
@@ -8,7 +9,6 @@
     background-image: url(https://wallpapercave.com/wp/wp4034733.jpg);
     padding: 5rem;
 }
-/* using color codes to check that tags are correct*/
 
 textarea{
 font-size: 20px;
@@ -18,6 +18,22 @@ width:150px;
 background-color:#f5c842;
 }
 
+#save-log{
+background-color: rgb(102, 47, 255);
+}
+
+#delete-log{
+    background-color: rgb(216, 2, 45);
+}
 button{
-background-color: tomato;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    border-radius: 2rem;
+    height: 50px;
+    width: 150px;
+}
+
+#output{
+    background-image: url(http://www.pptbackgrounds.org/uploads/lined-paper-powerpoint-backgrounds.jpg) ;
+    background-size: cover;
 }
