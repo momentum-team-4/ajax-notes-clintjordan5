@@ -1,3 +1,5 @@
+
+
 const foodLog = document.querySelector("#meals")
 const saveLog = document.querySelector("#save-log")
 const deleteLog = document.querySelector("#delete-log")
@@ -11,14 +13,15 @@ saveLog.addEventListener("click", function () {
   let logText3 = document.querySelector("#meal3").value
   let logText4 = document.querySelector("#meal4").value
   let logText5 = document.querySelector("#meal5").value
-  output.textContent = logText1 + logText2 + logText3 + logText4 + logText5 + " Testing Output ";
+  output.textContent = logText1 + logText2 + logText3 + logText4 + logText5;
   fetch('http://localhost:3000/notes/', {
     method: 'POST',
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ "meal1": logText1})
+    body: JSON.stringify({ "meal1": logText1 })
+    // where to add meal 2, meal 3, etc?
   })
     .then(r => r.json())
-    .then(data => {console.log(data)}
+    .then(data => { console.log(data) }
     )
 })
 
@@ -32,11 +35,12 @@ window.addEventListener('load', function () {
 fetch('http://localhost:3000/notes/', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ meals: meal1.value, datetime: moment().format('YYYY-MM-DD HH:mm') })
+  body: JSON.stringify({ meals: meal1.value, datetime: moment().format('YYYY-MM-DD HH:mm')})
 })
   .then(r => r.json())
-  .then(newMood => {
-    const newMoodEl = createMoodEl(newMood)
-    addToMoodsDiv(newMoodEl)
+  .then(newMeal => {
+    const newMealEl = createMealEl(newMeal)
+    addToMealsDiv(newMealEl)
   })
-})
+
+// need to define moment and newMealEl
