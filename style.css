@@ -3,12 +3,13 @@
     box-sizing: border-box;
 }
 
-.meals{
+/* body{
+
     height: fit-content;
     width: fit-content;
     background-image: url(https://wallpapercave.com/wp/wp4034733.jpg);
-    padding: 5rem;
-}
+    padding: 10rem;
+} */
 
 textarea{
 font-size: 20px;
